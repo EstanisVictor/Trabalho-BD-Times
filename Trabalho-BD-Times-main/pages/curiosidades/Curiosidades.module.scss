@@ -1,0 +1,30 @@
+.container {
+  padding: 24px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  code {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f6811;
+    padding: 8px;
+  }
+
+  .listJogadores {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  ul {
+    li {
+      padding: 24px 16px;
+    }
+  }
+}

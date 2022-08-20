@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+
+  .logo {
+    padding: 4px 16px;
+    cursor: pointer;
+  }
+
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .section {
+      height: 100%;
+      cursor: pointer;
+      padding: 8px 8px;
+      position: relative;
+
+      transition: all 0.1s linear;
+      &:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        height: 4px;
+        background-color: lightgreen;
+
+        animation: expand 0.2s ease-in-out forwards;
+      }
+    }
+
+    .sectionActive {
+      h3 {
+        padding: 0 8px;
+      }
+      padding: 6px 0px;
+      border-bottom: 4px solid lightgreen;
+    }
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 0%;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0%;
+  }
+}
